@@ -1,0 +1,22 @@
+<aside class="speaker-card {% if include.column %} {{ include.column }}{% endif %}">
+   <header>
+    <h3>{{ include.title }}</h3>
+<a href="{{ include.homepage }}">
+   <img src="/img/speakers/{{ include.avatarurl }}"></a>
+<h4>{{ include.profilename }}
+
+
+{% if include.twitter %} <a href="https://twitter.com/{{ include.twitter }}"><i class="fa fa-twitter" style="position: relative; top: -5px;text-indent:0px;  vertical-align: middle;"></i></a> {% endif %}
+{% if include.git %} <a href="https://github.com/{{ include.git }}"><i class="fa fa-github" style="position: relative; top: -5px; text-indent:0px;  "></i></a>{% endif %}
+{% if include.researchgate %} <a href="https://www.researchgate.net/profile/{{ include.researchgate }}"> <i class="ai ai-researchgate fa-vc" style="  margin-bottom: -50px;position: relative; top: -5px;text-indent:0px;"  ></i></a>{% endif %} 
+
+</h4>
+
+
+  <h6>{{ include.affiliation }}</h6>
+
+
+   </header>
+</aside>
+
+

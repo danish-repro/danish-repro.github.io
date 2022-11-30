@@ -1,0 +1,71 @@
+---
+
+port: 4000
+host: 0.0.0.0
+safe: false
+
+
+### site serving configuration ###
+exclude: [CNAME, README.md, .gitignore,archive]
+permalink: /:title ## disables post output
+timezone: null
+lsi: false
+markdown: kramdown
+highlighter: rouge
+
+
+### content configuration ###
+title: Danish Reproducibility Network
+keywords: reproducibility, open science
+description:
+#source_link:
+#favicon: favicon.png?
+url: https://danish-repro.github.io
+
+
+countdown:
+  launch_date: 2019-02-28
+  format: "%d days, %H hours, %M minutes, %S seconds" 
+
+### template colors, used site-wide via css ###
+
+colors:
+
+  aongreen: '#1C7439'
+  ugentblue: '#1E64C8'
+  ugentyellow: '#FFD200'
+  white:     '#eee'
+  beneluxblue: '#004777'
+  beneluxred: '#A30000'
+  beneluxorange: '#FF7700'
+  beneluxbuff: '#EFD28D'
+  beneluxtiffa: '#00AFB5'
+  beneluxpurple: '#5E4751'
+  beneluxlightblue: '#BCE7FD'
+  beneluxpink: '#DAD2D8'
+  osceblue: '#00205F'
+
+### flat  design colors from https://www.materialui.co/flatuicolors
+  turquoise: '#1abc9c'
+  emerald   : '#2ecc71'
+  peteriver : '#3498db'
+  amethyst  : '#9b59b6'
+  wetasphalt : '#34495e'
+  red: '#F44336'
+  pink: '#ff80ab'
+  cyan: '#1ba1e2'
+  cobalt: '#0050ef'
+  blueibro: '#051d9b'
+  blueblue: '#2942C'
+  azul: '#1760E4'  
+  indianred: '#CD5C5C' ### https://htmlcolorcodes.com/
+### choose matarial design colors from http://materialuicolors.co/
+
+
+kramdown:
+  auto_ids:  false
+
+sass:
+  sass_dir: stylesheets/_sass/
+
+theme: jekyll-theme-slate

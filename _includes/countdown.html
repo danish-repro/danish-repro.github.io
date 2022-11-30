@@ -1,0 +1,67 @@
+<!-- https://github.com/kelvinmo/soon-->
+<!-- line 8: class="section-countdown"> instead of class="section countdown">-->
+<!-- removed between line 11 and 12: &nbsp;-->
+<!-- inserted line 14: font size-->
+<!-- inserted line 58-61 instead of line 63, changed line 12-21 as well-->
+
+
+<section class="section-countdown">
+	<div id="countdown-timer" class="countdown-timer"
+        data-launch-date="{{ site.countdown.launch_date | date: "%s" }}"
+        data-format="{{ site.countdown.format }}">
+  	  <div id='tiles'></div>
+  	  <div class="labels">
+		<font size="6">
+	        DEADLINE in: 
+   	 	<span class='dvalue'></span> days
+   	 	<span class='hvalue'></span> hours
+   		<span class='mvalue'></span> mins
+   	 	<span class='svalue'></span> secs
+		</font>
+  	  </div>
+        </div>
+</section>
+
+<script type="text/javascript">
+(function() {
+    var el = document.getElementById("countdown-timer");
+    var launch_date = new Date(el.getAttribute("data-launch-date") * 1000);
+    var format = el.getAttribute("data-format");
+         
+    var days, hours, minutes, seconds;
+         
+    setInterval(function () {
+        var now = new Date().getTime();
+        var delta = (launch_date - now) / 1000;
+         
+        days = parseInt(delta / 86400);
+        delta = delta % 86400;
+             
+        hours = parseInt(delta / 3600);
+        delta = delta % 3600;
+             
+        minutes = parseInt(delta / 60);
+        seconds = parseInt(delta % 60);
+
+        var context = {
+            d: days,
+            H: hours,
+            M: minutes,
+            S: seconds
+        };
+        var result = format;
+        Object.keys(context).forEach(function (key) {
+            result = result.replace(new RegExp("%" + key), context[key]);
+        });
+        result = result.replace(/%%/, '%');
+
+	document.querySelector('.labels .dvalue').innerHTML = days;
+	document.querySelector('.labels .hvalue').innerHTML = hours - 2;
+	document.querySelector('.labels .mvalue').innerHTML = minutes;
+	document.querySelector('.labels .svalue').innerHTML = seconds;
+
+        //el.innerHTML = result;
+         
+    }, 1000);
+})();
+</script>
