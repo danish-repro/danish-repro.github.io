@@ -1,0 +1,14 @@
+---
+title: "About"
+bg: white
+color: osceblue
+---
+
+# Welcome to the Danish Reproducibility Network!
+
+The Danish Reproducibility Network (DKRN) is a peer-led consortium located in Denmark. It follows an organisational format adopted internationally as nationwide “Reproducibility Networks”. The DKRN collaborates with the other Reproducibility Networks whilst remaining a unique and independent community. 
+
+
+### Our mission
+
+DKRN is a platform that connects Denmark-based researchers aiming to promote, facilitate and educate about open, reproducible and robust research. We aim to achieve this through fostering collaborations on projects, engaging with stakeholders and through the organisation of events. Our work will ensure that Denmark remains an integral part of world-leading efforts contributing to the dissemination of best research practices and positive culture change in academia. 
